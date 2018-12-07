@@ -1,7 +1,7 @@
-package com.besofty.exceldemo.order.excel.component;
+package com.besofty.exceldemo.excel.order.component;
 
 import com.besofty.exceldemo.order.enums.OrderStatusEnum;
-import com.besofty.exceldemo.order.excel.dto.ApplyNotPassedExcelDTO;
+import com.besofty.exceldemo.excel.order.dto.ApplyNotPassedExcelDTO;
 import com.besofty.exceldemo.util.excel.ExcelUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
@@ -18,8 +18,8 @@ public class ApplyNotPassedOrderExcelComponent extends OrderExcelComponent{
     }
 
     @Override
-    public XSSFWorkbook generateExcel(String excelTypeCode) {
-        List<ApplyNotPassedExcelDTO> applyNotPassedExcelDTOS = getContent(excelTypeCode)
+    public XSSFWorkbook generateExcel(Integer orderStatus) {
+        List<ApplyNotPassedExcelDTO> applyNotPassedExcelDTOS = getContent(orderStatus)
                 .stream()
                 .map(ApplyNotPassedExcelDTO::fromOrderDO)
                 .collect(Collectors.toList());

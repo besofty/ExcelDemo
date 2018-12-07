@@ -1,7 +1,7 @@
-package com.besofty.exceldemo.order.excel.component;
+package com.besofty.exceldemo.excel.order.component;
 
 import com.besofty.exceldemo.order.enums.OrderStatusEnum;
-import com.besofty.exceldemo.order.excel.dto.OverdueOrderExcelDTO;
+import com.besofty.exceldemo.excel.order.dto.OverdueOrderExcelDTO;
 import com.besofty.exceldemo.util.excel.ExcelUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
@@ -18,8 +18,8 @@ public class OverdueOrderExcelComponent extends OrderExcelComponent{
     }
 
     @Override
-    public XSSFWorkbook generateExcel(String excelTypeCode) {
-        List<OverdueOrderExcelDTO> overdueOrderExcelDTOS = getContent(excelTypeCode)
+    public XSSFWorkbook generateExcel(Integer orderStatus) {
+        List<OverdueOrderExcelDTO> overdueOrderExcelDTOS = getContent(orderStatus)
                 .stream()
                 .map(OverdueOrderExcelDTO::fromLoanOrderDO)
                 .collect(Collectors.toList());

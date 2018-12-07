@@ -1,7 +1,7 @@
-package com.besofty.exceldemo.order.excel;
+package com.besofty.exceldemo.excel.order;
 
 import com.besofty.exceldemo.order.enums.OrderStatusEnum;
-import com.besofty.exceldemo.order.excel.component.OrderExcelComponent;
+import com.besofty.exceldemo.excel.order.component.OrderExcelComponent;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

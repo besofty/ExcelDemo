@@ -1,7 +1,7 @@
-package com.besofty.exceldemo.order.excel.component;
+package com.besofty.exceldemo.excel.order.component;
 
 import com.besofty.exceldemo.order.enums.OrderStatusEnum;
-import com.besofty.exceldemo.order.excel.dto.NormalRepaymentExcelDTO;
+import com.besofty.exceldemo.excel.order.dto.NormalRepaymentExcelDTO;
 import com.besofty.exceldemo.util.excel.ExcelUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
@@ -18,8 +18,8 @@ public class NormalRepaymentExcelComponent extends OrderExcelComponent{
     }
 
     @Override
-    public XSSFWorkbook generateExcel(String excelTypeCode) {
-        List<NormalRepaymentExcelDTO> normalRepaymentExcelDTOS = getContent(excelTypeCode)
+    public XSSFWorkbook generateExcel(Integer orderStatus) {
+        List<NormalRepaymentExcelDTO> normalRepaymentExcelDTOS = getContent(orderStatus)
                 .stream()
                 .map(NormalRepaymentExcelDTO::fromLoanOrderDO)
                 .collect(Collectors.toList());

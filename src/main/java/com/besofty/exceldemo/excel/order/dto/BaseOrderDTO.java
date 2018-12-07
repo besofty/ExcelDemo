@@ -1,4 +1,4 @@
-package com.besofty.exceldemo.order.excel.dto;
+package com.besofty.exceldemo.excel.order.dto;
 
 import com.besofty.exceldemo.util.excel.ExcelResources;
 import lombok.Data;

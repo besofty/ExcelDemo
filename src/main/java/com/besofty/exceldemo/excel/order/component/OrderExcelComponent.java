@@ -1,4 +1,4 @@
-package com.besofty.exceldemo.order.excel.component;
+package com.besofty.exceldemo.excel.order.component;
 
 import com.besofty.exceldemo.order.OrderService;
 import com.besofty.exceldemo.order.domain.OrderDO;
